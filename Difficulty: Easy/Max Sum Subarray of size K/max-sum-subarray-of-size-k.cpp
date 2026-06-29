@@ -2,7 +2,6 @@ class Solution {
   public:
     int maxSubarraySum(vector<int>& arr, int k) {
         // code here
-        if(arr.size()==1) return arr[0];
         if(arr.size()<k) return 0;
         int windowsum = 0;
         int low = 0;
