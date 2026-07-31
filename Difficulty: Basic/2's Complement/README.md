@@ -1,0 +1,10 @@
+<h2><a href="https://www.geeksforgeeks.org/problems/2s-complement3124/1">2's Complement</a></h2><h3>Difficulty Level : Difficulty: Basic</h3><hr><div class="problems_problem_content__Xm_eO" style="--text-color: var(--problem-text-color);"><p><span style="font-size: 18px;">Given a binary string <strong>s</strong>, find its <a href="https://www.geeksforgeeks.org/digital-logic/twos-complement/" target="_blank" rel="noopener">2's complement</a> and return the result as a binary string of the same length. <br></span><span style="font-size: 18px;">The 2's complement of a binary number is obtained by first flipping all its bits (0 to 1 and 1 to 0) and then adding 1 to the resulting binary number.</span></p>
+<p><span style="font-size: 18px;"><strong>Note:</strong> 2's complement of 0 is always 0.&nbsp;</span></p>
+<p><strong><span style="font-size: 18px;">Examples:</span></strong></p>
+<pre><span style="font-size: 18px;"><strong>Input:</strong> s = "00000101"
+<strong>Output:</strong> 11111011
+<strong data-start="744" data-end="760">Explanation</strong><strong>: </strong>Flip all the bits to get 11111010, then add 1 to obtain 11111011.<br></span></pre>
+<pre><span style="font-size: 18px;"><strong>Input: </strong>s = "0000"<strong>
+Output: </strong>0000<strong>
+Explanation: </strong>Flipping all bits gives 1111. Adding 1 causes a carry to ripple through every position (1+1=10 at each bit, carrying left each time), which would normally produce a 5-bit result of 10000. But since numbers are stored in a fixed number of bits (just like a hardware register of fixed width), the overflowing carry bit simply falls off and is discarded, leaving 0000. This matches the fact that in two's complement, there is only one representation of zero - there's no separate "negative zero".</span></pre>
+<p><span style="font-size: 18px;"><strong>Constraints:</strong><br>1 ≤ |s| ≤ 10<sup>5</sup></span></p></div><p><span style=font-size:18px><strong>Company Tags : </strong><br><code>Adobe</code>&nbsp;<br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Bit Magic</code>&nbsp;
