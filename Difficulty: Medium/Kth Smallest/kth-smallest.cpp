@@ -2,14 +2,20 @@ class Solution {
   public:
     int kthSmallest(vector<int> &arr, int k) {
         // code here
-        priority_queue<int,vector<int>,greater<int>>mh;
-        for(int i=0;i<arr.size();i++){
-            mh.push(arr[i]);
+        priority_queue<int>pq;
+        for(int i=0;i<k;i++){
+            pq.push(arr[i]);
         }
-        k--;
-        while(k--){
-            mh.pop();
+        int idx = k;
+        while(idx<arr.size()){
+            if(pq.top()<=arr[idx]){
+                idx++;
+            }else{
+                pq.pop();
+                pq.push(arr[idx]);
+                idx++;
+            }
         }
-        return mh.top();
+        return pq.top();
     }
 };
